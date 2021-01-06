@@ -9,18 +9,23 @@ import java.util.Scanner;
 public class Main {
 
     private DataBase dataBase;
+    private AddressBook addressBook;
     private static Scanner scanner;
 
     private ArrayList<String> menu;
     public Main() throws DataBaseConnectionException {
         dataBase = new DataBase();
         scanner = new Scanner(System.in);
+        addressBook = new AddressBook(dataBase);
         initMenuOption();
     }
 
     private void initMenuOption(){
         menu = new ArrayList<>();
         menu.add("Exit");
+        menu.add("Add New Person");
+        menu.add("Remove Person");
+        menu.add("Update Person");
         /**
          * Add your menu items here
          */
@@ -49,6 +54,15 @@ public class Main {
                     case 0:
                         System.out.println("Goodbye!!");
                         endProgram = true;
+                        break;
+                    case 1:
+                        System.out.println("Add New Person");
+                        break;
+                    case 2:
+                        System.out.println("Remove Person");
+                        break;
+                    case 3:
+                        System.out.println("Update Person");
                         break;
                     default:
                         break;
