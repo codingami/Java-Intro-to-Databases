@@ -9,35 +9,36 @@ public class AddressBook {
 
 
     private DataBase dataBase;
-    private String owner;
-    private ArrayList<String> people = new ArrayList<String>();
+    private Person owner;
+    private ArrayList<Person> people;
 
     public AddressBook(DataBase dataBase) {
-
         this.dataBase = dataBase;
         this.owner = owner;
+        this.people = new ArrayList<Person>();
     }
 
-    public String getOwner() {
-        return Person;
+    public Person getOwner() {
+        return owner;
     }
 
-    public void setOwner(String Person) {
+    public void setOwner(Person Person) {
         this.owner = owner;
     }
 
-    public void addPerson(String Person) {
+    public void addPerson(Person person) {
     }
 
-    public void removePerson(String Person) {
+    public void removePerson(Person Person) {
     }
 
-    public String getPersonByEmail(String) {
-        return Person;
+    public Person getPersonByEmail(String email) {
+        return null;
     }
 
-    public ArrayList<String> getAllPeople() {
-        return Person;
+    public ArrayList<Person> getAllPeople() {
+
+        return people;
     }
 
     public Boolean saveAll() {
